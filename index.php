@@ -98,6 +98,10 @@
         opacity:0.8;
       }
 
+      main p {
+        margin-left: 8px;
+      }
+
       main > div > a, main > div > a:active, main > div > a:visited {
         display: block;
         padding: 4px;
