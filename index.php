@@ -89,8 +89,10 @@
         text-decoration: none;
         font-family: ThasadithRegular, Sans-serif;
         font-weight: lighter;
+        transition: all .5s ease-in;
         -moz-transition: all .5s ease-in;
         -o-transition: all .5s ease-in;
+        -webkit-transition: all .5s ease-in;
       }
 
       main {
