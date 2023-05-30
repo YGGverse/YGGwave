@@ -72,13 +72,27 @@
     <meta charset="utf-8" />
     <style>
 
+      @font-face {
+        font-family: 'ThasadithRegular';
+        src: url('./font/AlumniSansPinstripe-Regular.woff2');
+      }
+
+      @font-face {
+        font-family: 'ThasadithRegular';
+        src: url('./fonts/Thasadith/Thasadith-Regular.eot');
+        src: url('./fonts/Thasadith/Thasadith-Regular.eot?#iefix') format('embedded-opentype'),
+             url('./fonts/Thasadith/Thasadith-Regular.woff2') format('woff2'),
+             url('./fonts/Thasadith/Thasadith-Regular.woff') format('woff'),
+             url('./fonts/Thasadith/Thasadith-Regular.ttf') format('truetype');
+      }
+
       * {
         border: 0;
         margin: 0;
         padding: 0;
         color: #fff;
         text-decoration: none;
-        font-family: Sans-serif;
+        font-family: ThasadithRegular, Sans-serif;
         font-weight: lighter;
         -moz-transition: all .5s ease-in;
         -o-transition: all .5s ease-in;
@@ -99,7 +113,7 @@
       }
 
       main p {
-        margin-left: 8px;
+        margin-left: 6px;
       }
 
       main > div > a, main > div > a:active, main > div > a:visited {
