@@ -126,7 +126,7 @@
   </head>
   <body>
     <main>
-      <h1>YGGwave<sup><a href="https://github.com/YGGverse/YGGwave/SIGNALS" style="color:#<?php echo substr(dechex(crc32(microtime())), 0, 6) ?>">~</a></sup></h1>
+      <h1>YGGwave<sup><a href="https://github.com/YGGverse/YGGwave/tree/main/SIGNALS" style="color:#<?php echo substr(dechex(crc32(microtime())), 0, 6) ?>">~</a></sup></h1>
       <p>the radio hub</p>
       <?php foreach (YGGwave::getSignals() as $signal) { ?>
         <?php echo $signal ?>
