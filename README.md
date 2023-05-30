@@ -1,1 +1,1 @@
-# YGGwave
+# YGGwave ~ Open Source, Javascript-less Radio Hub
