@@ -74,11 +74,6 @@
 
       @font-face {
         font-family: 'ThasadithRegular';
-        src: url('./font/AlumniSansPinstripe-Regular.woff2');
-      }
-
-      @font-face {
-        font-family: 'ThasadithRegular';
         src: url('./fonts/Thasadith/Thasadith-Regular.eot');
         src: url('./fonts/Thasadith/Thasadith-Regular.eot?#iefix') format('embedded-opentype'),
              url('./fonts/Thasadith/Thasadith-Regular.woff2') format('woff2'),
