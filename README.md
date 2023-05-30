@@ -1,4 +1,4 @@
-# YGGwave ~ Open Source, Javascript-less Radio Hub
+# YGGwave
 
 #### UI conception
 
