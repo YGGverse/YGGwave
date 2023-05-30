@@ -52,7 +52,7 @@
 
       do {
 
-        if (!isset($variant[$version])) return $padding + rand(); // :)
+        if (!isset($variant[$version])) return rand($padding, 100 - $padding); // :)
 
         $position = $variant[$version++];
 
