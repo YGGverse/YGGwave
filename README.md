@@ -1,4 +1,4 @@
-# YGGwave
+# YGGwave ~ The Radio Catalog
 
 #### UI conception
 
