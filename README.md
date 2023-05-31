@@ -11,8 +11,7 @@
 Add your streaming link in markdown format to the network registry you are interested in:
 
 * [Yggdrasil](https://github.com/YGGverse/YGGwave/blob/main/SIGNALS/YGGDRASIL.md)
-
-or [create new one](https://github.com/YGGverse/YGGwave/blob/main/SIGNALS)!
+* [add new network](https://github.com/YGGverse/YGGwave/blob/main/SIGNALS)
 
 ##### Development
 
