@@ -54,7 +54,9 @@
 
         if (!isset($variant[$version])) return rand($padding, 100 - $padding); // :)
 
-        $position = $variant[$version++];
+        $position = $variant[$version];
+
+        $version++;
 
       } while ($position < $padding || $position > 100 - $padding);
 
