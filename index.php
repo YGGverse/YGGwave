@@ -25,7 +25,7 @@
 
                 $result[] = sprintf('<div style="top:%s%%;left:%s%%">%s</div>',
                                     self::_getSignalPosition($hash),
-                                    self::_getSignalPosition($hash),
+                                    self::_getSignalPosition($hash, true),
                                     sprintf('<a target="_blank"
                                                 href="%s"
                                                 title="%s">%s</a>', htmlspecialchars($data[2]),
@@ -44,9 +44,9 @@
       return $result;
     }
 
-    private static function _getSignalPosition($hash, $padding = 20) {
+    private static function _getSignalPosition(int $hash, bool $reverse = false, int $padding = 20) {
 
-      $variant = str_split($hash, 2);
+      $variant = $reverse ? array_reverse(str_split($hash, 2)) : str_split($hash, 2);
 
       $version = 0;
 
