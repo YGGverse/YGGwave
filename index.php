@@ -66,9 +66,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>YGGwave ~ The Radio Hub</title>
-    <meta name="description" content="Open Source, Javascript-less Radio Hub" />
-    <meta name="keywords" content="web, radio, hub, stream, yggdrasil, js-less, open source" />
+    <title>YGGwave ~ The Radio Catalog</title>
+    <meta name="description" content="Open Source, Javascript-less Radio Catalog" />
+    <meta name="keywords" content="web, radio, stream, catalog, yggdrasil, js-less, open source" />
     <meta charset="utf-8" />
     <style>
 
@@ -142,7 +142,7 @@
   <body>
     <main>
       <h1>YGGwave<sup><a href="https://github.com/YGGverse/YGGwave/tree/main/SIGNALS" style="color:#<?php echo substr(dechex(crc32(microtime())), 0, 6) ?>">~</a></sup></h1>
-      <p>the radio hub</p>
+      <p>the radio catalog</p>
       <?php foreach (YGGwave::getSignals() as $signal) { ?>
         <?php echo $signal ?>
       <?php } ?>
