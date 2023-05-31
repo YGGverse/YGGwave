@@ -21,7 +21,7 @@
 
               if ($host = parse_url($data[2], PHP_URL_HOST)) {
 
-                $hash = crc32($host);
+                $hash = crc32($data[2]);
 
                 $result[] = sprintf('<div style="top:%s%%;left:%s%%">%s</div>',
                                     self::_getSignalPosition($hash),
