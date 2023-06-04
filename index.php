@@ -86,7 +86,7 @@
         }
       }
 
-      return implode(',', $keywords);
+      return implode(', ', $keywords);
     }
 
     private static function _getSignalPosition(int $hash, bool $reverse = false, int $padding = 20) {
@@ -114,7 +114,7 @@
 <html lang="en-US">
   <head>
     <title>YGGwave ~ The Radio Catalog</title>
-    <meta name="description" content="Open, Javascript-less Radio Hub" />
+    <meta name="description" content="Open, Javascript-less Radio Hub https://github.com/YGGverse/YGGwave" />
     <meta name="keywords" content="<?php echo YGGwave::getMetaKeywords() ?>" />
     <meta charset="utf-8" />
     <style>
