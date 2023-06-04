@@ -54,8 +54,20 @@
 
           if (preg_match('/\[(.*?)\]\((.*?)\)/ui', $signal, $data)) {
 
-            if (!empty($data[2])) {
+            if (!empty($data[1]) && !empty($data[2])) {
 
+              // Link description tags
+              if (preg_match_all('/[A-z0-9]{3,}/ui', $data[1], $matches)) {
+
+                foreach ($matches[0] as $keyword) {
+
+                  $keyword = trim($keyword);
+                  $keyword = mb_strtolower($keyword);
+                  $keywords[md5($keyword)] = $keyword;
+                }
+              }
+
+              // URI-based tags
               if ($query = parse_url($data[2], PHP_URL_PATH)) {
 
                 foreach (explode('/', $query) as $keyword) {
