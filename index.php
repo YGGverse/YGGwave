@@ -63,7 +63,7 @@
 
                   $keyword = trim($keyword);
                   $keyword = mb_strtolower($keyword);
-                  $keywords[md5($keyword)] = $keyword;
+                  $keywords[md5($keyword)] = htmlentities($keyword);
                 }
               }
 
@@ -77,7 +77,7 @@
                   if (!empty($keyword)) {
 
                     $keyword = mb_strtolower($keyword);
-                    $keywords[md5($keyword)] = $keyword;
+                    $keywords[md5($keyword)] = htmlentities($keyword);
                   };
                 }
               }
