@@ -114,7 +114,7 @@
 <html lang="en-US">
   <head>
     <title>YGGwave ~ The Radio Catalog</title>
-    <meta name="description" content="Open, Javascript-less Radio Catalog" />
+    <meta name="description" content="Open, Javascript-less Radio Hub" />
     <meta name="keywords" content="<?php echo YGGwave::getMetaKeywords() ?>" />
     <meta charset="utf-8" />
     <style>
