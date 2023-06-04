@@ -44,6 +44,39 @@
       return $result;
     }
 
+    public static function getMetaKeywords() {
+
+      $keywords = [];
+
+      if ($signals = file_get_contents('SIGNALS/YGGDRASIL.md')) {
+
+        foreach (explode(PHP_EOL, $signals) as $signal) {
+
+          if (preg_match('/\[(.*?)\]\((.*?)\)/ui', $signal, $data)) {
+
+            if (!empty($data[2])) {
+
+              if ($query = parse_url($data[2], PHP_URL_PATH)) {
+
+                foreach (explode('/', $query) as $keyword) {
+
+                  $keyword = trim($keyword);
+
+                  if (!empty($keyword)) {
+
+                    $keyword = mb_strtolower($keyword);
+                    $keywords[md5($keyword)] = $keyword;
+                  };
+                }
+              }
+            }
+          }
+        }
+      }
+
+      return implode(',', $keywords);
+    }
+
     private static function _getSignalPosition(int $hash, bool $reverse = false, int $padding = 20) {
 
       $variant = $reverse ? array_reverse(str_split($hash, 2)) : str_split($hash, 2);
@@ -69,8 +102,8 @@
 <html lang="en-US">
   <head>
     <title>YGGwave ~ The Radio Catalog</title>
-    <meta name="description" content="Open Source, Javascript-less Radio Catalog" />
-    <meta name="keywords" content="web, radio, stream, catalog, yggdrasil, js-less, open source" />
+    <meta name="description" content="Open, Javascript-less Radio Catalog" />
+    <meta name="keywords" content="<?php echo YGGwave::getMetaKeywords() ?>" />
     <meta charset="utf-8" />
     <style>
 
