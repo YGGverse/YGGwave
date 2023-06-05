@@ -62,8 +62,15 @@
                 foreach ($matches[0] as $keyword) {
 
                   $keyword = trim($keyword);
+
                   $keyword = mb_strtolower($keyword);
-                  $keywords[md5($keyword)] = htmlentities($keyword);
+                  $keyword = htmlentities($keyword);
+
+                  if (isset($keywords[$keyword])) {
+                    $keywords[$keyword]++;
+                  } else {
+                    $keywords[$keyword] = 1;
+                  }
                 }
               }
 
@@ -77,8 +84,14 @@
                   if (!empty($keyword)) {
 
                     $keyword = mb_strtolower($keyword);
-                    $keywords[md5($keyword)] = htmlentities($keyword);
-                  };
+                    $keyword = htmlentities($keyword);
+
+                    if (isset($keywords[$keyword])) {
+                      $keywords[$keyword]++;
+                    } else {
+                      $keywords[$keyword] = 1;
+                    }
+                  }
                 }
               }
             }
@@ -86,7 +99,15 @@
         }
       }
 
-      return implode(', ', $keywords);
+      // Display keyword has count > n
+      $result = [];
+      foreach ($keywords as $keyword => $quantity) {
+
+        // if ($quantity > 1) @TODO
+        $result[] = $keyword;
+      }
+
+      return implode(', ', $result);
     }
 
     private static function _getSignalPosition(int $hash, bool $reverse = false, int $padding = 20) {
